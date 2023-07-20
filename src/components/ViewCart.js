@@ -62,7 +62,7 @@ const ViewCart = () => {
   }, []);
 
   const getProducts = async () => {
-    let result = await fetch(`http://localhost:6900/productOne/${params.id}`);
+    let result = await fetch(`https://musicartbackend-dsso.onrender.com/productOne/${params.id}`);
     result = await result.json();
     setProductFullName(result.productFullName);
     setProductName(result.productName);
@@ -102,11 +102,11 @@ handleCarts();
     const email = user.email;
     console.log(email);
 
-    let result = await fetch('http://localhost:6900/productList');
+    let result = await fetch('https://musicartbackend-dsso.onrender.com/productList');
     result = await result.json();
     console.log(result);
 
-    let result2 = await fetch('http://localhost:6900/getCardId');
+    let result2 = await fetch('https://musicartbackend-dsso.onrender.com/getCardId');
     result2 = await result2.json();
     console.log(result2);
 

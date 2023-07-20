@@ -27,10 +27,10 @@ const BuyNow = () => {
   }, []);
 
   const handleCarts = async () => {
-    let result = await fetch('http://localhost:6900/productList');
+    let result = await fetch('https://musicartbackend-dsso.onrender.com/productList');
     result = await result.json();
     console.log(result);
-    let result2 = await fetch('http://localhost:6900/getBuyNow');
+    let result2 = await fetch('https://musicartbackend-dsso.onrender.com/getBuyNow');
     result2 = await result2.json();
     console.log(result2);
     

@@ -20,7 +20,7 @@ const SignUp = () => {
     const handleUserData =async(e) => {
       console.log(name, number,email, password);
   
-      let result = await fetch('http://localhost:6900/register',{
+      let result = await fetch('https://musicartbackend-dsso.onrender.com/register',{
         method:"post",
         body: JSON.stringify({name,email,number,password}),
         headers: { 

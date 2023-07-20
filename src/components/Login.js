@@ -14,13 +14,12 @@ useEffect(()=>{
     if(auth){
       navigate("/")
     }
-  
   })
   
     const handleUserData2=async(e)=>{
       console.log(email,password);
   
-      let result = await fetch('http://localhost:6900/login',{
+      let result = await fetch('https://musicartbackend-dsso.onrender.com/login',{
         method:"post",
         body: JSON.stringify({email, password}),
         headers: { 

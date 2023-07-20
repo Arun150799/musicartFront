@@ -37,7 +37,7 @@ const ProductList = () => {
 
   const getProducts = async () => {
     try {
-      const response = await axios.get('http://localhost:6900/productList');
+      const response = await axios.get('https://musicartbackend-dsso.onrender.com/productList');
       setProductList(response.data);
     } catch (error) {
       console.log(error);
@@ -46,7 +46,7 @@ const ProductList = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get('http://localhost:6900/productList', { params: {...filters,sortOption }
+      const response = await axios.get('https://musicartbackend-dsso.onrender.com/productList', { params: {...filters,sortOption }
     
     });
       setProductList(response.data);
@@ -59,7 +59,7 @@ const ProductList = () => {
     let key = event.target.value;
     if (key) {
       try {
-        const response = await axios.get(`http://localhost:6900/search/${key}`);
+        const response = await axios.get(`https://musicartbackend-dsso.onrender.com/search/${key}`);
         setProductList(response.data);
       } catch (error) {
         console.log(error);
@@ -85,7 +85,7 @@ const ProductList = () => {
     alert("Your product has been added successfully!");
 
     try {
-      await fetch('http://localhost:6900/addToCart', {
+      await fetch('https://musicartbackend-dsso.onrender.com/addToCart', {
         method: "post",
         body: JSON.stringify({ email, id }),
         headers: {
@@ -105,7 +105,7 @@ const ProductList = () => {
     // alert("Your product has been added successfully!");
 
     try {
-      await fetch('http://localhost:6900/buyNow', {
+      await fetch('https://musicartbackend-dsso.onrender.com/buyNow', {
         method: "post",
         body: JSON.stringify({ email, id }),
         headers: {
@@ -152,7 +152,6 @@ const ProductList = () => {
             <option value="">Headphone type</option>
             <option className='option' value="Over-ear headPhone">Over-ear headphone</option>
             <option className='option' value="Black | Ear Buds">Ear Buds</option>
-            {/* <option value="Blue">Blue</option> */}
             
           </select>
       
